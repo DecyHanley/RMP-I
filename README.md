@@ -1,4 +1,4 @@
 RMP_I
 =====
 
-Rich Media Programming I Commits
+Rich Media Programming I
