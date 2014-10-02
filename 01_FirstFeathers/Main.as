@@ -4,9 +4,10 @@
 	import feathers.controls.Button;
 	import feathers.controls.Callout;
 	import feathers.controls.Label;
+	//import feathers.themes.AeonDesktopTheme;
 	import feathers.themes.MetalWorksMobileTheme;
+	//import feathers.themes.MinimalMobileTheme;
 	import starling.display.Button;
-
 	public class Main extends Sprite {
 		private var button: Button;
 		public function Main() {
@@ -14,7 +15,9 @@
 		}
 		private function addedToStageHandler(event: Event): void {
 			this.removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
+			//new AeonDesktopTheme();
 			new MetalWorksMobileTheme();
+			//new MinimalMobileTheme();
 			this.button = new Button();
 			this.button.label = "Click Me";
 			this.button.addEventListener(Event.TRIGGERED, button_TriggeredHandler);

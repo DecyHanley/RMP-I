@@ -8,7 +8,6 @@
 	import starling.events.Event;
 	import starling.display.Quad;
 	import starling.display.Button;
-	
 	public class ScreenA extends PanelScreen {
 		public function ScreenA() {
 			trace("An object of ScreenA has has created");
