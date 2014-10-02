@@ -11,7 +11,9 @@
 	import feathers.layout.HorizontalLayout;
 	import feathers.layout.AnchorLayout;
 	import feathers.layout.AnchorLayoutData;
+	//import feathers.themes.AeonDesktopTheme;
 	import feathers.themes.MetalWorksMobileTheme;
+	//import feathers.themes.MinimalMobileTheme;
 	import feathers.events.FeathersEventType;
 	import starling.textures.Texture;
 	import starling.textures.TextureAtlas;
@@ -37,7 +39,9 @@
 		protected function initializeHandler(e: Event): void {
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 			this.stage.addEventListener(Event.RESIZE, stageResized);
+			//new AeonDesktopTheme();
 			new MetalWorksMobileTheme();
+			//new MinimalMobileTheme();
 			var screenLayout: AnchorLayout = new AnchorLayout();
 			this.layout = screenLayout;
 			this.width = this.stage.stageWidth;

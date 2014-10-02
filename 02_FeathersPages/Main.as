@@ -2,8 +2,8 @@
 	import starling.display.Sprite;
 	import starling.events.Event;
 	import feathers.controls.Drawers;
-	import feathers.themes.MetalWorksMobileTheme;
 	//import feathers.themes.AeonDesktopTheme;
+	import feathers.themes.MetalWorksMobileTheme;
 	//import feathers.themes.MinimalMobileTheme;
 	import feathers.controls.Screen;
 	import feathers.controls.ScreenNavigator;
@@ -16,8 +16,8 @@
 		}
 		protected function initializeHandler(e: Event): void {
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
-			new MetalWorksMobileTheme();
 			//new AeonDesktopTheme();
+			new MetalWorksMobileTheme();
 			//new MinimalMobileTheme();
 			var screenA: ScreenA = new ScreenA();
 			var screenNavItem1: ScreenNavigatorItem = new ScreenNavigatorItem(screenA, {
