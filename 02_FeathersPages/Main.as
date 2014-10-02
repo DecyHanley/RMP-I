@@ -5,11 +5,11 @@
 	import feathers.controls.ScreenNavigator;
 	import feathers.controls.ScreenNavigatorItem;
 	import feathers.controls.ScrollContainer;
-	import starling.display.Sprite;
-	import starling.events.Event;
 	//import feathers.themes.AeonDesktopTheme;
 	import feathers.themes.MetalWorksMobileTheme;
 	//import feathers.themes.MinimalMobileTheme;
+	import starling.display.Sprite;
+	import starling.events.Event;
 	public class Main extends ScreenNavigator {
 		public function Main() {
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
