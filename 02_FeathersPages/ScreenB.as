@@ -2,11 +2,11 @@
 	import feathers.controls.PanelScreen;
 	import feathers.controls.ScrollContainer;
 	import feathers.controls.ScrollText;
-	import feathers.controls.Button;
 	import feathers.layout.VerticalLayout;
 	import feathers.events.FeathersEventType;
-	import starling.events.Event;
+	import feathers.controls.Button;
 	import Utils;
+	import starling.events.Event;
 	public class ScreenB extends PanelScreen {
 		public function ScreenB() {
 			trace("An object of ScreenB has been created");

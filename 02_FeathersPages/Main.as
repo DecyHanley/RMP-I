@@ -1,23 +1,23 @@
 ﻿package {
-	import feathers.events.FeathersEventType;
+	import starling.display.Sprite;
+	import starling.events.Event;
 	import feathers.controls.Drawers;
+	import feathers.themes.MetalWorksMobileTheme;
+	//import feathers.themes.AeonDesktopTheme;
+	//import feathers.themes.MinimalMobileTheme;
 	import feathers.controls.Screen;
 	import feathers.controls.ScreenNavigator;
 	import feathers.controls.ScreenNavigatorItem;
 	import feathers.controls.ScrollContainer;
-	//import feathers.themes.AeonDesktopTheme;
-	import feathers.themes.MetalWorksMobileTheme;
-	//import feathers.themes.MinimalMobileTheme;
-	import starling.display.Sprite;
-	import starling.events.Event;
+	import feathers.events.FeathersEventType;
 	public class Main extends ScreenNavigator {
 		public function Main() {
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}
 		protected function initializeHandler(e: Event): void {
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
-			//new AeonDesktopTheme();
 			new MetalWorksMobileTheme();
+			//new AeonDesktopTheme();
 			//new MinimalMobileTheme();
 			var screenA: ScreenA = new ScreenA();
 			var screenNavItem1: ScreenNavigatorItem = new ScreenNavigatorItem(screenA, {

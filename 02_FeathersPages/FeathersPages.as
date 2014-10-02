@@ -1,8 +1,8 @@
 ﻿package {
 	import flash.display.Sprite;
+	import starling.core.Starling;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
-	import starling.core.Starling;
 	public class FeathersPages extends Sprite {
 		protected var _starling: Starling;
 		public function FeathersPages() {
