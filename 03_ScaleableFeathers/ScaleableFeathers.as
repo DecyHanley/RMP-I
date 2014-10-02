@@ -6,7 +6,6 @@
 	import flash.geom.Rectangle;
 	import starling.core.Starling;	
 	import feathers.system.DeviceCapabilities;
-	
 	public class ScaleableFeathers extends MovieClip {
 		private var starling:Starling;
 		public function ScaleableFeathers() {
@@ -20,7 +19,13 @@
 			starling = new Starling(Main,this.stage);
 			starling.start();
 		}
-		private function
+		private function stageResized(e.Event):void {
+			starling.stage.stageWidth = this.stage.stageWidth;
+			starling.stage.stageHeight = this.stage.stageHeight;
+			const viewPort:Rectangle = starling.viewPort;
+			viewPort.width = this.stage.stageWdith;
+			viewPort.height = this.stage.stageHeight;
+			starling.viewPort = viewPort;
+		}
 	}
-	
 }
