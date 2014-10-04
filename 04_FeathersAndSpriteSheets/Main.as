@@ -80,7 +80,7 @@
 			this.buttonPanel.addChild(this.button);
 		}
 		protected function button_triggeredHandler(e: Event): void {
-			bgImgLoader.source = atlas.getTexture("Sprite_2");
+			bgImgLoader.source = atlas.getTexture("Luigi");
 		}
 		protected function stageResized(e: Event): void {
 			this.width = this.stage.stageWidth;
