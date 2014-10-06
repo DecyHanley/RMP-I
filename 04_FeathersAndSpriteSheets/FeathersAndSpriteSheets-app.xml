@@ -17,7 +17,7 @@
 	</name>
 -->
 <application xmlns="http://ns.adobe.com/air/application/3.8">
-  <id>Untitled1</id>
+  <id>FeathersAndShriteSheets</id>
   <versionNumber>1.0.0</versionNumber>
   <versionLabel/>
   <filename>FeathersAndSpriteSheets</filename>
@@ -29,7 +29,7 @@
     <systemChrome>standard</systemChrome>
     <transparent>false</transparent>
     <visible>true</visible>
-    <fullScreen>false</fullScreen>
+    <fullScreen>true</fullScreen>
     
     <renderMode>direct</renderMode>
     <autoOrients>true</autoOrients></initialWindow>

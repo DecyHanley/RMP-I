@@ -57,7 +57,7 @@
 			this.buttonPanel.layoutData = buttonPanelLayoutData;
 			var buttonPanelLayout: HorizontalLayout = new HorizontalLayout();
 			buttonPanelLayout.horizontalAlign = HorizontalLayout.HORIZONTAL_ALIGN_CENTER;
-			this.buttonPanel.Layout = buttonPanelLayout;
+			this.buttonPanel.layout = buttonPanelLayout;
 			this.addChild(this.buttonPanel);
 			this.contentPanel = new Panel();
 			var contentPanelLayoutData: AnchorLayoutData = new AnchorLayoutData();
