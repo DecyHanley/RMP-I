@@ -68,7 +68,7 @@
 			contentPanelLayoutData.bottomAnchorDisplayObject = this.buttonPanel;
 			contentPanel.layoutData = contentPanelLayoutData;
 			this.addChild(contentPanel);
-			bgTexture = atlas.getTexture("Sprite_1");
+			bgTexture = atlas.getTexture("Mario");
 			bgImgLoader = new ImageLoader();
 			bgImgLoader.source = bgTexture;
 			bgImgLoader.width = this.stage.stageWidth;
