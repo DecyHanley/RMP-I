@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:4fb4045d73728e2a1fac0f542db9d3b1:d12e15d47614ad6f2945f088992fff65:02917ea8ec58c130009a8401329f0171$ -->
-<TextureAtlas imagePath="SpriteSheetTextures.png">
-    <SubTexture name="Luigi" x="431" y="2" width="265" height="380" frameX="-115" frameY="-15" frameWidth="400" frameHeight="400"/>
-    <SubTexture name="Mario" x="2" y="2" width="427" height="385" frameX="-20" frameY="-36" frameWidth="459" frameHeight="459"/>
-</TextureAtlas>
