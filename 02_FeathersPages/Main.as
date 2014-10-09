@@ -10,7 +10,9 @@
 	import feathers.controls.ScreenNavigatorItem;
 	import feathers.controls.ScrollContainer;
 	import feathers.events.FeathersEventType;
+	
 	public class Main extends ScreenNavigator {
+		
 		public function Main() {
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}

@@ -6,8 +6,10 @@
 	import flash.geom.Rectangle;
 	import starling.core.Starling;
 	import feathers.system.DeviceCapabilities;
+	
 	public class ScaleableFeathers extends Sprite {
 		private var starling: Starling;
+		
 		public function ScaleableFeathers() {
 			this.stage.align = StageAlign.TOP_LEFT;
 			this.stage.scaleMode = StageScaleMode.NO_SCALE;

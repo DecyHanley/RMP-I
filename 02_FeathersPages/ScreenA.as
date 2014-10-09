@@ -8,7 +8,9 @@
 	import starling.events.Event;
 	import Utils;
 	import starling.display.Quad;
+	
 	public class ScreenA extends PanelScreen {
+		
 		public function ScreenA() {
 			trace("An object of ScreenA has has created");
 			super();

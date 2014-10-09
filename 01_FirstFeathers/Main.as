@@ -7,8 +7,10 @@
 	//import feathers.themes.AeonDesktopTheme;
 	import feathers.themes.MetalWorksMobileTheme;
 	//import feathers.themes.MinimalMobileTheme;
+	
 	public class Main extends Sprite {
 		private var button: Button;
+		
 		public function Main() {
 			this.addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
 		}
