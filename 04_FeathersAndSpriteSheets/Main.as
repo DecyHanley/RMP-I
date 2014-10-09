@@ -74,6 +74,7 @@
 			bgImgLoader.width = this.stage.stageWidth;
 			bgImgLoader.maintainAspectRatio = true;
 			contentPanel.addChild(bgImgLoader);
+			trace("Mario");
 			this.button = new Button();
 			this.button.label = "Click Me";
 			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler);
@@ -81,6 +82,7 @@
 		}
 		protected function button_triggeredHandler(e: Event): void {
 			bgImgLoader.source = atlas.getTexture("Luigi");
+			trace("Luigi");
 		}
 		protected function stageResized(e: Event): void {
 			this.width = this.stage.stageWidth;
