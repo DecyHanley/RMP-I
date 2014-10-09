@@ -6,8 +6,11 @@
 	import flash.geom.Rectangle;
 	import starling.core.Starling;
 	import feathers.system.DeviceCapabilities;
+	
 	public class FeathersAndSpriteSheets extends Sprite {
+		
 		protected var starling: Starling;
+		
 		public function FeathersAndSpriteSheets() {
 			this.stage.align = StageAlign.TOP_LEFT;
 			this.stage.scaleMode = StageScaleMode.NO_SCALE;
