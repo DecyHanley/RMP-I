@@ -21,9 +21,9 @@
 	import flash.display.BitmapData;
 	import flash.display.Bitmap;
 	public class Main extends Screen {
-		[Embed(source = "SpriteSheet.xml", mimeType = "application/octet-stream")]
+		[Embed(source = "sprites/SpriteSheet.xml", mimeType = "application/octet-stream")]
 		public static const ATLAS_XML: Class;
-		[Embed(source = "SpriteSheetTextures.png")]
+		[Embed(source = "sprites/SpriteSheetTextures.png")]
 		public static const ATLAS_TEXTURE: Class;
 		protected var atlas: TextureAtlas;
 		protected var atlasTexture: Texture;
