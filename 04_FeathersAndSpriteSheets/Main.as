@@ -6,8 +6,6 @@
 	import feathers.controls.Panel;
 	import feathers.controls.ImageLoader;
 	import feathers.controls.TabBar;
-	import feathers.layout.VerticalLayout;
-	import feathers.layout.VerticalLayoutData;
 	import feathers.layout.HorizontalLayout;
 	import feathers.layout.AnchorLayout;
 	import feathers.layout.AnchorLayoutData;
@@ -20,32 +18,32 @@
 	import starling.display.Image;
 	import flash.display.BitmapData;
 	import flash.display.Bitmap;
-	
+
 	public class Main extends Screen {
 		[Embed(source = "sprites/SpriteSheet.xml", mimeType = "application/octet-stream")]
 		public static const ATLAS_XML: Class;
-		[Embed(source = "sprites/SpriteSheetTextures.png")]
+		[Embed(source = "sprites/SpriteSheet.png")]
 		public static const ATLAS_TEXTURE: Class;
-		protected var atlas: TextureAtlas;
-		protected var atlasTexture: Texture;
-		protected var bgTexture: Texture;
-		protected var bgImgLoader: ImageLoader;
-		protected var button: Button;
-		protected var contentPanel: Panel;
-		protected var buttonPanel: Panel;
-		
+		private var atlas: TextureAtlas;
+		private var atlasTexture: Texture;
+		private var bgTexture: Texture;
+		private var bgImgLoader: ImageLoader;
+		private var button: Button;
+		private var contentPanel: Panel;
+		private var buttonPanel: Panel;
+
 		public function Main() {
 			super();
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}
-		protected function initializeHandler(e: Event): void {
+		private function initializeHandler(e: Event): void {
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 			this.stage.addEventListener(Event.RESIZE, stageResized);
-			
+
 			//new AeonDesktopTheme();
 			new MetalWorksMobileTheme();
 			//new MinimalMobileTheme();
-			
+
 			var screenLayout: AnchorLayout = new AnchorLayout();
 			this.layout = screenLayout;
 			this.width = this.stage.stageWidth;
@@ -53,7 +51,7 @@
 			atlasTexture = Texture.fromBitmap(new ATLAS_TEXTURE());
 			var xml: XML = XML(new ATLAS_XML());
 			atlas = new TextureAtlas(atlasTexture, xml);
-			
+
 			this.buttonPanel = new Panel();
 			var buttonPanelLayoutData: AnchorLayoutData = new AnchorLayoutData();
 			buttonPanelLayoutData.left = 10;
@@ -64,7 +62,7 @@
 			buttonPanelLayout.horizontalAlign = HorizontalLayout.HORIZONTAL_ALIGN_CENTER;
 			this.buttonPanel.layout = buttonPanelLayout;
 			this.addChild(this.buttonPanel);
-			
+
 			this.contentPanel = new Panel();
 			var contentPanelLayoutData: AnchorLayoutData = new AnchorLayoutData();
 			contentPanelLayoutData.top = 10;
@@ -74,33 +72,24 @@
 			contentPanelLayoutData.bottomAnchorDisplayObject = this.buttonPanel;
 			contentPanel.layoutData = contentPanelLayoutData;
 			this.addChild(contentPanel);
-			
+
 			bgTexture = atlas.getTexture("Mario");
 			bgImgLoader = new ImageLoader();
 			bgImgLoader.source = bgTexture;
 			bgImgLoader.width = this.stage.stageWidth;
 			bgImgLoader.maintainAspectRatio = true;
 			contentPanel.addChild(bgImgLoader);
-			
+
 			this.button = new Button();
-			this.button.label = "Mario";
+			this.button.label = "Click Me";
 			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler1);
 			this.buttonPanel.addChild(this.button);
-			
-			this.button = new Button();
-			this.button.label = "Luigi";
-			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler2);
-			this.buttonPanel.addChild(this.button);
 		}
-		protected function button_triggeredHandler1(e: Event): void {
-			bgImgLoader.source = atlas.getTexture("Mario");
-			trace("Mario");
-		}
-		protected function button_triggeredHandler2(e: Event): void {
+		private function button_triggeredHandler1(e: Event): void {
 			bgImgLoader.source = atlas.getTexture("Luigi");
 			trace("Luigi");
 		}
-		protected function stageResized(e: Event): void {
+		private function stageResized(e: Event): void {
 			this.width = this.stage.stageWidth;
 			this.height = this.stage.stageHeight;
 			bgImgLoader.width = this.width;

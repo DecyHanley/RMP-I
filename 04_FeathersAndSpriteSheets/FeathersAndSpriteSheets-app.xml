@@ -33,7 +33,12 @@
     
     <renderMode>direct</renderMode>
     <autoOrients>true</autoOrients></initialWindow>
-  <icon/>
+  <icon>
+    <image36x36>android/StarlingBird36.png</image36x36>
+    <image48x48>android/StarlingBird48.png</image48x48>
+    <image72x72>android/StarlingBird72.png</image72x72>
+    <image96x96>android/StarlingBird96.png</image96x96>
+  </icon>
   <customUpdateUI>false</customUpdateUI>
   <allowBrowserInvocation>false</allowBrowserInvocation>
 </application>

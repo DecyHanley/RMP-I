@@ -8,15 +8,15 @@
 	import starling.events.Event;
 	import Utils;
 	import starling.display.Quad;
-	
+
 	public class ScreenA extends PanelScreen {
-		
+
 		public function ScreenA() {
 			trace("An object of ScreenA has has created");
 			super();
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}
-		protected function initializeHandler(): void {
+		private function initializeHandler(): void {
 			trace("ScreenA object initialized");
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 			this.headerProperties.title = "ScreenA";
@@ -38,7 +38,7 @@
 			this.addChild(screenBButton);
 			screenBButton.addEventListener(Event.TRIGGERED, handlerScreenBButtonClick);
 		}
-		protected function handlerScreenBButtonClick(e: Event): void {
+		private function handlerScreenBButtonClick(e: Event): void {
 			this.dispatchEventWith("showScreenB");
 		}
 	}

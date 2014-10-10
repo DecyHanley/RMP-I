@@ -3,11 +3,11 @@
 	import starling.core.Starling;
 	
 	public class FirstFeathers extends Sprite {
-		private var _starling: Starling;
+		private var starling: Starling;
 		
 		public function FirstFeathers() {
-			_starling = new Starling(Main, this.stage);
-			_starling.start();
+			starling = new Starling(Main, this.stage);
+			starling.start();
 		}
 	}
 }

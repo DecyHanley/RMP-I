@@ -3,14 +3,14 @@
 	import starling.core.Starling;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
-	
+
 	public class FeathersPages extends Sprite {
-		protected var _starling: Starling;
-		
+		private var starling: Starling;
+
 		public function FeathersPages() {
-			_starling = new Starling(Main, this.stage);
-			this._starling.enableErrorChecking = true;
-			_starling.start();
+			starling = new Starling(Main, this.stage);
+			this.starling.enableErrorChecking = true;
+			starling.start();
 		}
 	}
 }

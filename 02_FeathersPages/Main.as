@@ -10,13 +10,13 @@
 	import feathers.controls.ScreenNavigatorItem;
 	import feathers.controls.ScrollContainer;
 	import feathers.events.FeathersEventType;
-	
+
 	public class Main extends ScreenNavigator {
-		
+
 		public function Main() {
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}
-		protected function initializeHandler(e: Event): void {
+		private function initializeHandler(e: Event): void {
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 			//new AeonDesktopTheme();
 			new MetalWorksMobileTheme();
