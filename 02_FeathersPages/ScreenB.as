@@ -46,5 +46,7 @@
 		private function handleScreenAButtonClick(e: Event): void {
 			this.dispatchEventWith("showScreenA");
 		}
+		
 	}
+	
 }

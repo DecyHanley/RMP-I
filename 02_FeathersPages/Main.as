@@ -33,5 +33,7 @@
 			this.addScreen("screenB", screenNavItem2);
 			this.showScreen("screenA");
 		}
+		
 	}
+	
 }
