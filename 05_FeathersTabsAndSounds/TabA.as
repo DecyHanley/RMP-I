@@ -10,8 +10,10 @@
 	import starling.utils.AssetManager;
 
 	public class TabA extends Panel {
-		private var button: Button;
+		private var playButton:Button;
+		private var stopButton:Button;
 		private var theAssetsManager: AssetManager;
+		private var currentSoundChannel:SoundChannel;
 
 		public function TabA() {
 			super();
@@ -24,20 +26,38 @@
 		}
 		private function initializeHandler(e: Event): void {
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
-			this.button = new Button();
-			this.button.label = "Play Me";
-			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler);
-			this.addChild(this.button);
+			this.playButton = new Button();
+			this.playButton.label = "Play";
 			
-			this.button.validate();
-			this.button.x = (this.stage.stageWidth - this.button.width) / 2;
-			this.button.y = (this.stage.stageHeight - this.button.height) / 2;
+			this.stopButton = new Button();
+			this.stopButton.label = "Stop";
+			
+			this.playButton.addEventListener(Event.TRIGGERED, handlePlay);
+			this.stopButton.addEventListener(Event.TRIGGERED, handleStop);
+
+			this.addChild(this.playButton);
+			this.addChild(this.stopButton);
+
+			this.playButton.validate();
+			this.stopButton.validate();
+
+			this.playButton.x = (this.stage.stageWidth - this.playButton.width) / 2;
+			this.playButton.y = (this.stage.stageHeight - this.playButton.height) / 2;
+			
+			this.stopButton.x = this.playButton.x;
+			this.stopButton.y = this.playButton.y + (this.playButton.height/2) + 5 + (this.stopButton.height/2);
 		}
-		private function button_triggeredHandler(e: Event): void {
-			trace("TabA Button Clicked");
-			theAssetsManager.playSound("Sound1");
+		private function handlePlay(e: Event): void {
+			trace("Play Clicked");
+			currentSoundChannel = theAssetsManager.playSound("Sound1");
 		}
-		
+		private function handleStop(e: Event): void {
+			trace("Stop Clicked");
+			if (currentSoundChannel != null) {
+				currentSoundChannel.stop();
+			}
+		}
+
 	}
-	
+
 }

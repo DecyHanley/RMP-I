@@ -1,24 +1,15 @@
 ﻿package {
 	import starling.events.Event;
 	import starling.display.Sprite;
-
 	import feathers.controls.Screen;
 	import feathers.controls.Panel;
-	//import feathers.controls.ImageLoader;
 	import feathers.controls.TabBar;
-	//import feathers.layout.VerticalLayout;
-	//import feathers.layout.VerticalLayoutData;
-	//import feathers.layout.HorizontalLayout;
 	import feathers.layout.AnchorLayout;
 	import feathers.layout.AnchorLayoutData;
 	//import feathers.themes.AeonDesktopTheme;
 	import feathers.themes.MetalWorksMobileTheme;
 	//import feathers.themes.MinimalMobileTheme;
 	import feathers.events.FeathersEventType;
-
-	//import starling.textures.Texture;
-	//import starling.textures.TextureAtlas;
-	//import starling.display.Image;
 	import feathers.motion.transitions.ScreenFadeTransitionManager;
 	import feathers.data.ListCollection;
 	import starling.utils.AssetManager;
@@ -69,7 +60,7 @@
 					label: "Three"
 				},
 			]);
-			tabBar.selectedIndex = 0;
+			tabBar.selectedIndex = 1;
 			tabBar.addEventListener(Event.CHANGE, tabs_changeHandler);
 
 			tabsLayoutData = new AnchorLayoutData();
