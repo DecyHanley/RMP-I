@@ -40,5 +40,7 @@
 			this.button.x = (this.stage.stageWidth - this.button.width) / 2;
 			this.button.y = (this.stage.stageHeight - this.button.height) / 2;
 		}
+		
 	}
+	
 }

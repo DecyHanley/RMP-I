@@ -29,5 +29,7 @@
 			viewPort.height = this.stage.stageHeight;
 			starling.viewPort = viewPort;
 		}
+		
 	}
+	
 }
