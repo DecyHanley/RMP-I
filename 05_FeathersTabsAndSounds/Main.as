@@ -94,5 +94,7 @@
 		private function tabs_changeHandler(e: Event): void {
 			trace("selectedIndex: ", tabBar.selectedIndex);
 		}
+		
 	}
+	
 }

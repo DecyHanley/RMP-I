@@ -37,5 +37,7 @@
 			trace("TabA Button Clicked");
 			theAssetsManager.playSound("Sound1");
 		}
+		
 	}
+	
 }
