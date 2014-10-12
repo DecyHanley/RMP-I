@@ -79,6 +79,11 @@
 			bgImgLoader.width = this.stage.stageWidth;
 			bgImgLoader.maintainAspectRatio = true;
 			contentPanel.addChild(bgImgLoader);
+			
+			this.button = new Button();
+			this.button.label = "Mario";
+			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler2);
+			this.buttonPanel.addChild(this.button);
 
 			this.button = new Button();
 			this.button.label = "Luigi";
@@ -86,22 +91,17 @@
 			this.buttonPanel.addChild(this.button);
 			
 			this.button = new Button();
-			this.button.label = "Mario";
-			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler2);
-			this.buttonPanel.addChild(this.button);
-			
-			this.button = new Button();
 			this.button.label = "Bowser";
 			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler3);
 			this.buttonPanel.addChild(this.button);
 		}
-		private function button_triggeredHandler1(e: Event): void {
-			bgImgLoader.source = atlas.getTexture("Luigi");
-			trace("Luigi");
-		}
 		private function button_triggeredHandler2(e: Event): void {
 			bgImgLoader.source = atlas.getTexture("Mario");
 			trace("Mario");
+		}
+		private function button_triggeredHandler1(e: Event): void {
+			bgImgLoader.source = atlas.getTexture("Luigi");
+			trace("Luigi");
 		}
 		private function button_triggeredHandler3(e: Event): void {
 			bgImgLoader.source = atlas.getTexture("Bowser");
@@ -112,5 +112,7 @@
 			this.height = this.stage.stageHeight;
 			bgImgLoader.width = this.width;
 		}
+		
 	}
+	
 }

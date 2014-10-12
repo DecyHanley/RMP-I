@@ -8,7 +8,6 @@
 	import feathers.system.DeviceCapabilities;
 
 	public class FeathersAndSpriteSheets extends Sprite {
-
 		private var starling: Starling;
 
 		public function FeathersAndSpriteSheets() {
@@ -30,5 +29,7 @@
 			viewPort.height = this.stage.stageHeight;
 			starling.viewPort = viewPort;
 		}
+		
 	}
+	
 }
