@@ -134,5 +134,7 @@
 			bgImgLoader.width = this.width;
 			bgImgLoader.height = this.height;
 		}
+		
 	}
+	
 }
