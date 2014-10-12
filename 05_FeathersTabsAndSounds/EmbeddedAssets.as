@@ -1,6 +1,6 @@
 ﻿package {
 	public class EmbeddedAssets {
-		[Embed(source = 'sounds/Beep.mp3')]
-		public static const Beep: Class;
+		[Embed(source = 'sounds/OverWorldBGM.mp3')]
+		public static const Sound1: Class;
 	}
 }

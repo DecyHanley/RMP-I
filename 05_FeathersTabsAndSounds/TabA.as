@@ -1,6 +1,6 @@
 ﻿package {
 	import feathers.controls.Panel;
-	import feathers.contols.Button;
+	import feathers.controls.Button;
 	import feathers.events.FeathersEventType;
 
 	import starling.events.Event;
@@ -11,33 +11,31 @@
 
 	public class TabA extends Panel {
 		private var button: Button;
-		private var theAssetsManager: AssetsManager;
+		private var theAssetsManager: AssetManager;
 
 		public function TabA() {
 			super();
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}
-		public function setAssetMananger(am: AssetManager): void {
+		public function setAssetManager(am: AssetManager): void {
 			if (am is AssetManager) {
-				this.theAssetManager = am;
+				this.theAssetsManager = am;
 			}
 		}
-		private function initilizeHandler(e: Event): void {
+		private function initializeHandler(e: Event): void {
+			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 			this.button = new Button();
 			this.button.label = "Play Me";
-
-			this.button.addEventListener(Event.Triggered, button_triggeredHandler);
-
+			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler);
 			this.addChild(this.button);
-
+			
 			this.button.validate();
-
 			this.button.x = (this.stage.stageWidth - this.button.width) / 2;
 			this.button.y = (this.stage.stageHeight - this.button.height) / 2;
 		}
 		private function button_triggeredHandler(e: Event): void {
-			trace("Button Clicked");
-			theAssetManager.playSound("");
+			trace("TabA Button Clicked");
+			theAssetsManager.playSound("Sound1");
 		}
 	}
 }

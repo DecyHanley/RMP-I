@@ -44,21 +44,20 @@
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}
 		private function initializeHandler(e: Event): void {
+			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
+			this.stage.addEventListener(Event.RESIZE, stageResized);
 			assetMgr = new AssetManager();
 			assetMgr.verbose = true;
 			assetMgr.enqueue(EmbeddedAssets);
 			assetMgr.loadQueue(handleAssetsLoading);
 		}
 		private function handleAssetsLoading(ratioLoaded: Number): void {
-			trace("handleAssetsLoading: " + ratioLoaded * 100);
-			if (ratioLoaded == 100) {
+			trace("handleAssetsLoading: " + ratioLoaded);
+			if (ratioLoaded == 1) {
 				startApp()
 			}
 		}
 		private function startApp() {
-			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
-			this.stage.addEventListener(Event.RESIZE, stageResized);
-
 			//new AeonDesktopTheme();
 			new MetalWorksMobileTheme();
 			//new MinimalMobileTheme();
@@ -98,24 +97,36 @@
 			bgImgLoader.width = this.stage.stageWidth;
 			bgImgLoader.maintainAspectRatio = true;
 			contentPanel.addChild(bgImgLoader);
-
+			
 			this.button = new Button();
-			this.button.label = "Click Me";
+			this.button.label = "Mario";
+			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler2);
+			this.buttonPanel.addChild(this.button);
+			
+			this.button = new Button();
+			this.button.label = "Luigi";
 			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler1);
 			this.buttonPanel.addChild(this.button);
-
+			
 			this.button = new Button();
-			this.button.label = "Play Me";
-			this.button.addEventListener(Event.TRIGGERED, playHandler);
+			this.button.label = "Bowser";
+			this.button.addEventListener(Event.TRIGGERED, button_triggeredHandler3);
 			this.buttonPanel.addChild(this.button);
 		}
-		private function button_triggeredHandler1(e: Event): void {
-			trace("Luigi");
-			bgImgLoader.source = atlas.getTexture("Luigi");
+		private function button_triggeredHandler2(e: Event): void {
+			bgImgLoader.source = atlas.getTexture("Mario");
+			trace("Mario");
+			assetMgr.playSound("Sound1");
 		}
-		private function playHandler(event: Event): void {
-			trace("button PLAY pressed");
-			assetMgr.playSound("Beep");
+		private function button_triggeredHandler1(e: Event): void {
+			bgImgLoader.source = atlas.getTexture("Luigi");
+			trace("Luigi");
+			assetMgr.playSound("Sound2");
+		}
+		private function button_triggeredHandler3(e: Event): void {
+			bgImgLoader.source = atlas.getTexture("Bowser");
+			trace("Bowser");
+			assetMgr.playSound("Sound3");
 		}
 		private function stageResized(e: Event): void {
 			this.width = this.stage.stageWidth;
