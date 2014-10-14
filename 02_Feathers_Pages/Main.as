@@ -21,16 +21,19 @@
 			//new AeonDesktopTheme();
 			new MetalWorksMobileTheme();
 			//new MinimalMobileTheme();
+			
 			var screenA: ScreenA = new ScreenA();
 			var screenNavItem1: ScreenNavigatorItem = new ScreenNavigatorItem(screenA, {
 				"showScreenB": "screenB"
 			});
 			this.addScreen("screenA", screenNavItem1);
+			
 			var screenB: ScreenB = new ScreenB();
 			var screenNavItem2: ScreenNavigatorItem = new ScreenNavigatorItem(screenB, {
 				"showScreenA": "screenA"
 			});
 			this.addScreen("screenB", screenNavItem2);
+			
 			this.showScreen("screenA");
 		}
 		
