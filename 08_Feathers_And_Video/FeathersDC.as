@@ -26,11 +26,11 @@
 			starling.start();
 		}
 		private function stageResized(e: Event): void {
-			starling.stage.stageWidth = this.stage.stageWidth;
 			starling.stage.stageHeight = this.stage.stageHeight;
+			starling.stage.stageWidth = this.stage.stageWidth;
 			const viewPort: Rectangle = starling.viewPort;
-			viewPort.width = this.stage.stageWidth;
 			viewPort.height = this.stage.stageHeight;
+			viewPort.width = this.stage.stageWidth;
 			starling.viewPort = viewPort;
 		}
 		

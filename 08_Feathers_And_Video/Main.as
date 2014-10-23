@@ -53,8 +53,8 @@
 			new MetalWorksMobileTheme();
 
 			this.layout = new AnchorLayout();
-			this.width = this.stage.stageWidth;
 			this.height = this.stage.stageHeight;
+			this.width = this.stage.stageWidth;
 
 			potraitMode = true;
 
@@ -103,8 +103,8 @@
 			}
 		}
 		private function stageResized(e: Event): void {
-			this.width = this.stage.stageWidth;
 			this.height = this.stage.stageHeight;
+			this.width = this.stage.stageWidth;
 
 			if (this.height > this.width) {
 				this.potraitMode = true;
