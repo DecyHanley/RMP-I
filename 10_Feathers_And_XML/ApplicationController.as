@@ -43,7 +43,7 @@
 			loader.addEventListener(flash.events.Event.COMPLETE, slideShowXMLLoaded);
 			loader.load(theURL);
 		}
-		private function slideShowXMLLoaded(e:flash.events.Event):void{
+		private function slideShowXMLLoaded(e: flash.events.Event): void {
 			slideshowXML = new XML(e.target.data);
 			assetMgr = new AssetManager;
 			assetMgr.verbose = true;
@@ -86,7 +86,7 @@
 			this.addChild(activeSlideImage);
 		}
 		private function handleNextSlide(e: starling.events.TouchEvent): void {
-			var touch:Touch = e.getTouch(this, TouchPhase.BEGAN);
+			var touch: Touch = e.getTouch(this, TouchPhase.BEGAN);
 			if (touch) {
 				this.currentSlideIndex++;
 				this.currentSlideIndex = this.currentSlideIndex % this.numSlides;
