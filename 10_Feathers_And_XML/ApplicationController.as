@@ -38,7 +38,7 @@
 			loadSlideShowXML();
 		}
 		private function loadSlideShowXML() {
-			var theURL: URLRequest = new URLRequest(this.ENDPOINT_URL + "slideshow.xml");
+			var theURL: URLRequest = new URLRequest(this.ENDPOINT_URL + "slideshowXML.xml");
 			var loader: URLLoader = new URLLoader();
 			loader.addEventListener(flash.events.Event.COMPLETE, slideShowXMLLoaded);
 			loader.load(theURL);
