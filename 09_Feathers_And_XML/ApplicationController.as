@@ -50,7 +50,7 @@
 			var slideList: XMLList = slideshowXML.slide;
 			this.numSlides = slideList.length();
 			for (var i: int = 0; i < this.numSlides; i++) {
-				assetMgr.enqueue(this.ENDPOINT_URL + slideshowXML.@imagePath + slideshowXML.@image);
+				assetMgr.enqueue(this.ENDPOINT_URL + slideshowXML.@imagePath + slideList[i].@image);
 			}
 			assetMgr.loadQueue(handleAssetsLoading);
 		}

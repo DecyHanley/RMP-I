@@ -13,15 +13,11 @@
 		public function FeathersDC() {
 			this.stage.align = StageAlign.TOP_LEFT;
 			this.stage.scaleMode = StageScaleMode.NO_SCALE;
-
 			//DeviceCapabilities.dpi = 432;
 			//DeviceCapabilities.screenPixelWidth = 1080;
 			//DeviceCapabilities.screenPixelHeight = 1920;
-
 			this.stage.addEventListener(Event.RESIZE, stageResized);
-
 			Starling.handleLostContext = true;
-
 			starling = new Starling(ApplicationController, this.stage);
 			starling.start();
 		}
