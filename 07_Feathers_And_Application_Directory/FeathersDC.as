@@ -4,7 +4,9 @@
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
+	
 	import starling.core.Starling;
+	
 	import feathers.system.DeviceCapabilities;
 
 	public class FeathersDC extends Sprite {
@@ -14,15 +16,15 @@
 			this.stage.align = StageAlign.TOP_LEFT;
 			this.stage.scaleMode = StageScaleMode.NO_SCALE;
 
-			//DeviceCapabilities.dpi = 432;
-			//DeviceCapabilities.screenPixelWidth = 1080;
-			//DeviceCapabilities.screenPixelHeight = 1920;
+			DeviceCapabilities.dpi = 92;
+			DeviceCapabilities.screenPixelWidth = 1080;
+			DeviceCapabilities.screenPixelHeight = 1920;
 
 			this.stage.addEventListener(Event.RESIZE, stageResized);
 
 			Starling.handleLostContext = true;
 
-			starling = new Starling(Main, this.stage);
+			starling = new Starling(AppController, this.stage);
 			starling.start();
 		}
 		private function stageResized(e: Event): void {

@@ -1,6 +1,6 @@
 ﻿package {
-	import starling.events.Event;
 	import starling.display.Quad;
+	import starling.events.Event;
 	
 	import feathers.controls.PanelScreen;
 	import feathers.layout.VerticalLayout;
@@ -41,7 +41,7 @@
 		private function handlerScreenBButtonClick(e: Event): void {
 			this.dispatchEventWith("showScreenB");
 		}
-		
+
 	}
-	
+
 }

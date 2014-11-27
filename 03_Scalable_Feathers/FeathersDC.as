@@ -8,31 +8,27 @@
 	import starling.core.Starling;
 	
 	import feathers.system.DeviceCapabilities;
-
+	
 	public class FeathersDC extends Sprite {
-		private var starling:Starling;
+		private var starling: Starling;
 
 		public function FeathersDC() {
 			this.stage.align = StageAlign.TOP_LEFT;
 			this.stage.scaleMode = StageScaleMode.NO_SCALE;
-
 			DeviceCapabilities.dpi = 92;
 			DeviceCapabilities.screenPixelWidth = 1080;
 			DeviceCapabilities.screenPixelHeight = 1920;
-
 			this.stage.addEventListener(Event.RESIZE, stageResized);
-
 			Starling.handleLostContext = true;
-
 			starling = new Starling(AppController, this.stage);
 			starling.start();
 		}
 		private function stageResized(e: Event): void {
-			starling.stage.stageHeight = this.stage.stageHeight;
 			starling.stage.stageWidth = this.stage.stageWidth;
+			starling.stage.stageHeight = this.stage.stageHeight;
 			const viewPort: Rectangle = starling.viewPort;
-			viewPort.height = this.stage.stageHeight;
 			viewPort.width = this.stage.stageWidth;
+			viewPort.height = this.stage.stageHeight;
 			starling.viewPort = viewPort;
 		}
 		

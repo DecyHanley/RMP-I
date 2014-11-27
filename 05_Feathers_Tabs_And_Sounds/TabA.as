@@ -1,13 +1,13 @@
 ﻿package {
-	import feathers.controls.Panel;
-	import feathers.controls.Button;
-	import feathers.events.FeathersEventType;
-
-	import starling.events.Event;
-
 	import flash.media.Sound;
 	import flash.media.SoundChannel;
+	
+	import starling.events.Event;
 	import starling.utils.AssetManager;
+	
+	import feathers.events.FeathersEventType;
+	import feathers.controls.Panel;
+	import feathers.controls.Button;
 
 	public class TabA extends Panel {
 		private var playButton:Button;
