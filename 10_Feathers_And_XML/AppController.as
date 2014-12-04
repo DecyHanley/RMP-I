@@ -38,14 +38,12 @@
 		}
 		private function loadSlideShowXML() {
 			var theURL: URLRequest = new URLRequest(this.ENDPOINT_URL + "01_RMP_I/01_In_Class_Apps/10_Feathers_And_XML/assets/xml/slideshow.xml");
-			trace(this.ENDPOINT_URL + "01_RMP_I/01_In_Class_Apps/10_Feathers_And_XML/assets/xml/slideshow.xml");
 			var loader: URLLoader = new URLLoader();
 			loader.addEventListener(flash.events.Event.COMPLETE, slideShowXMLLoaded);
 			loader.load(theURL);
 		}
 		private function slideShowXMLLoaded(e: flash.events.Event): void {
 			slideshowXML = new XML(e.target.data);
-			trace(e.target.data);
 			assetMgr = new AssetManager();
 			assetMgr.verbose = true;
 			var slideList: XMLList = slideshowXML.slide;
