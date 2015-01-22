@@ -1,4 +1,4 @@
-# Rich Media Programming I
+											# Rich Media Programming I
 
 *Repo for Apps created using the Feathers and Starling Frameworks in Adobe Flash Pro for Rich Media Programming I @LSAD Clonmel.*
 
@@ -17,3 +17,4 @@
 ### 03 - Scalable Feathers App
 
 * This folders holds a Feathers and Starling App that has scalable elements.
+
