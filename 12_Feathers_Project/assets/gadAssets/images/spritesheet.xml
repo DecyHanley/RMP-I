@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="spritesheet.png">
+	<!-- Created with Adobe Flash Professional version 13.1.0.226 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="cmm.png" x="0" y="0" width="306" height="306" pivotX="0" pivotY="0"/>
+	<SubTexture name="dap.jpg" x="0" y="306" width="306" height="306" pivotX="0" pivotY="0"/>
+	<SubTexture name="gad.png" x="0" y="612" width="306" height="306" pivotX="0" pivotY="0"/>
+</TextureAtlas>
