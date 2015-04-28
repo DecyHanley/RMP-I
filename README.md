@@ -49,3 +49,7 @@
 #### 11 - [Feathers and RSS] (https://github.com/DecyHanley/RMP_I/tree/master/11_Feathers_And_RSS)
 
 * This Folder holds a Feathers App the can access an RSS feed
+
+#### 12 - [Feathers Project] (https://github.com/DecyHanley/RMP_I/tree/master/12_Feathers_Project)
+
+* This Folder holds a Feathers App gives information about courses @LSAD Clonmel
