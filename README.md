@@ -1,4 +1,4 @@
-# Rich Media Programming I.
+# Rich Media Programming I
 
 * 00 - [Feathers, Starling and Android Stuff] (https://github.com/DecyHanley/Rich-Media-Programing-I/tree/master/00_Starling_Feathers_And_Android_Stuff)
   * This folder holds the latest Feathers and Starling Frameworks and an Android Certificate.
